@@ -4,9 +4,9 @@
 #include <string>
 
 namespace execution {
-	void execute(const std::string executable, const std::string parameter); // It runs the given executable in a new asyncrhonous process
-	void execute_and_wait(const std::string executable, const std::string parameter); // It runs the given executable in a new syncrhonous process
-	void cmd_execute(const std::string command); // It executes the given command in a new cmd.exe shell; cmd.exe is started in a new asyncrhonous process
+	void execute(const std::string &executable, const std::string &parameter); // It runs the given executable in a new asynchronous process
+	void execute_and_wait(const std::string &executable, const std::string &parameter); // It runs the given executable in a new synchronous process
+	void cmd_execute(const std::string &command); // It executes the given command in a new cmd.exe shell; cmd.exe is started in a new asynchronous process
 } // namespace execution
 
 #endif // EXECUTION_H

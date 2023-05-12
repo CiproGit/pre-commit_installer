@@ -5,11 +5,11 @@
 
 using namespace std;
 
-Pre_commit::Pre_commit(const string project_directory) {
+Pre_commit::Pre_commit(const string &project_directory) {
 	file_system::find(project_directory, PRE_COMMIT_CONFIG, this->pre_commit_config_list);
 }
 
-Pre_commit::~Pre_commit() {}
+Pre_commit::~Pre_commit() = default;
 
 vector<string> Pre_commit::get_config_list() const {
 	return this->pre_commit_config_list;

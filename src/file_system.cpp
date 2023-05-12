@@ -5,7 +5,7 @@
 using namespace std;
 
 namespace file_system {
-	void find(const std::string directory, const std::string file_name, std::vector<std::string> &file_list, const bool recursive) {
+	void find(const std::string &directory, const std::string &file_name, std::vector<std::string> &file_list, const bool recursive) {
 		string file_to_find = directory + "/*.*";
 
 		WIN32_FIND_DATA find_data;
@@ -18,7 +18,6 @@ namespace file_system {
 				string found_file_path = directory + "/" + found_file_name;
 				if (recursive && (filesystem::is_directory(found_file_path))) find(found_file_path, file_name, file_list);
 				else {
-					string found_file_name = filesystem::path(found_file_path).filename().string();
 					if (found_file_name == file_name) file_list.push_back(filesystem::path(found_file_path).string());
 				}
 			} while (FindNextFile(handle_file_find, &find_data));
