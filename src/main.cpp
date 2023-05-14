@@ -12,6 +12,9 @@ string sanitize(string input) {
 int main(int argc, char *argv[]) {
 	cout << "******************************\n";
 	cout << "*    PRE-COMMIT INSTALLER    *\n";
+	cout << "*    Version 1.0.0           *\n";
+	cout << "*    Developed by            *\n";
+	cout << "*    Federico Cipressi       *\n";
 	cout << "******************************\n" << endl;
 
 	if (argc == 2) { // 1 argument
