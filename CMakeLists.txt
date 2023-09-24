@@ -10,4 +10,4 @@ include_directories(include)
 file(GLOB SOURCES src/*.cpp)
 file(GLOB HEADERS include/*.h)
 
-add_executable(commit_installer ${SOURCES} ${HEADERS})
+add_executable(pre-commit_installer ${SOURCES} ${HEADERS})
