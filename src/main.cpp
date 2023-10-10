@@ -1,8 +1,20 @@
 #include "pre_commit.h"
+#include "config.h"
 #include <iostream>
 #include <algorithm>
 
 using namespace std;
+
+void print_about() {
+	string version_string = to_string(VERSION_MAJOR) + "." + to_string(VERSION_MINOR) + "." + to_string(VERSION_PATCH);
+
+	cout << "******************************\n";
+	cout << "    PRE-COMMIT INSTALLER\n";
+	cout << "    Version " + version_string + "\n";
+	cout << "    Developed by\n";
+	cout << "    Federico Cipressi\n";
+	cout << "******************************\n" << endl;
+}
 
 string sanitize(string input) {
 	replace(input.begin(), input.end(), '\\', '/');
@@ -10,12 +22,7 @@ string sanitize(string input) {
 }
 
 int main(int argc, char *argv[]) {
-	cout << "******************************\n";
-	cout << "*    PRE-COMMIT INSTALLER    *\n";
-	cout << "*    Version 1.1.0           *\n";
-	cout << "*    Developed by            *\n";
-	cout << "*    Federico Cipressi       *\n";
-	cout << "******************************\n" << endl;
+	print_about();
 
 	if (argc == 2) { // 1 argument
 		cout << "Searching for pre-commit-config.yaml..." << endl;

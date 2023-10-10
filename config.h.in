@@ -1,0 +1,8 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#define VERSION_MAJOR @pre-commit_installer_VERSION_MAJOR@
+#define VERSION_MINOR @pre-commit_installer_VERSION_MINOR@
+#define VERSION_PATCH @pre-commit_installer_VERSION_PATCH@
+
+#endif // CONFIG_H

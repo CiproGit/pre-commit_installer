@@ -4,12 +4,12 @@
 #include <vector>
 #include <string>
 
-const std::string GIT_BASH = "\"C:/Program Files/Git/git-bash.exe\" -c";
-const std::string PRE_COMMIT_INSTALL = "pre-commit install";
-const std::string PRE_COMMIT_CONFIG = ".pre-commit-config.yaml";
-
 class Pre_commit {
 private:
+	const std::string GIT_BASH = "\"C:/Program Files/Git/git-bash.exe\" -c";
+	const std::string PRE_COMMIT_INSTALL = "pre-commit install";
+	const std::string PRE_COMMIT_CONFIG = ".pre-commit-config.yaml";
+
 	std::vector<std::string> pre_commit_config_list;
 
 public:
