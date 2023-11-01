@@ -17,7 +17,11 @@ void print_about() {
 }
 
 string sanitize(string input) {
-	replace(input.begin(), input.end(), '\\', '/');
+	if (input.back() == '\"') { // The last character of the input string is "
+		input = input.substr(0, input.size() - 1); // Remove the last character
+	}
+
+	replace(input.begin(), input.end(), '\\', '/'); // Replace backslash with forward slash
 	return input;
 }
 
@@ -40,7 +44,7 @@ int main(int argc, char *argv[]) {
 	}
 	else {
 		cerr << "Error: I need 1 argument\n";
-		cerr << "Usage: pre-commit_installer.exe [project directory]" << endl;
+		cerr << "Usage: pre-commit_installer [project directory]" << endl;
 		return EXIT_FAILURE;
 	}
 
