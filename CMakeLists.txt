@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(pre-commit_installer VERSION 1.2.0 LANGUAGES CXX)
+project(pre-commit_installer VERSION 1.3.0 LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON) # Add build directory to include path
 
